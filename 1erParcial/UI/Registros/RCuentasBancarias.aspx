@@ -55,11 +55,13 @@
                     </div>
                 </div>
 
-                <div class="columns" style="width: px;">
+                <div class="columns" >
                     <div class="form-group">
                         <div class="row" style="align-items: center;">
+                            <div style="width:50px">
                             <asp:Label for="FechaTextBox" ID="Label2" runat="server" Text="Fecha:"></asp:Label>
-                            <asp:TextBox ID="FechaTextBox" runat="server" class="form-control" TextMode="Date" Width="180"></asp:TextBox>
+                            </div>
+                                <asp:TextBox ID="FechaTextBox" runat="server" class="form-control" TextMode="Date" Width="180"></asp:TextBox>
 
                         </div>
                     </div>
