@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class DepositosBLL: Repositorio<Depositos>
+    public class RepositorioDepositos: Repositorio<Depositos>
     {
         public override bool Guardar(Depositos depositos)
         {
@@ -48,7 +48,7 @@ namespace BLL
             {
 
 
-                var depositoanterior = repositorio.Buscar(depositos.CuentaId);
+                var depositoanterior = repositorio.Buscar(depositos.DepositoId);
 
                 //identificar la diferencia ya sea restada o sumada
                 decimal diferencia;

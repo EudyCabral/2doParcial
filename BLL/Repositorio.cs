@@ -48,11 +48,14 @@ namespace BLL
             bool paso = false;
             try
             {
+                 _contexto = new Contexto();
+
                 _contexto.Entry(entity).State = EntityState.Modified;
                 if (_contexto.SaveChanges() > 0)
                 {
                     paso = true;
                 }
+               
             }
             catch (Exception)
             {
@@ -61,6 +64,7 @@ namespace BLL
             return paso;
         }
 
+        
         public virtual bool Eliminar(int id)
         {
             bool paso = false;
