@@ -21,7 +21,7 @@ namespace BLL
 
 
 
-        public bool Guardar(T entity)
+        public virtual bool Guardar(T entity)
         {
             bool paso = false;
 
@@ -43,7 +43,7 @@ namespace BLL
 
 
 
-        public bool Modificar(T entity)
+        public virtual bool  Modificar(T entity)
         {
             bool paso = false;
             try
@@ -61,7 +61,7 @@ namespace BLL
             return paso;
         }
 
-        public bool Eliminar(int id)
+        public virtual bool Eliminar(int id)
         {
             bool paso = false;
 

@@ -10,16 +10,7 @@
 namespace _1erParcial.UI.Registros {
     
     
-    public partial class RCuentasBancarias {
-        
-        /// <summary>
-        /// ScriptManager control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager;
+    public partial class RDepositos {
         
         /// <summary>
         /// LabelCuentas control.
@@ -49,22 +40,22 @@ namespace _1erParcial.UI.Registros {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// CuentaidTextBox control.
+        /// DepositosidTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CuentaidTextBox;
+        protected global::System.Web.UI.WebControls.TextBox DepositosidTextBox;
         
         /// <summary>
-        /// RequiredFieldValidatorNombre control.
+        /// RequiredFieldValidatorcid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorNombre;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorcid;
         
         /// <summary>
         /// Label1 control.
@@ -76,22 +67,22 @@ namespace _1erParcial.UI.Registros {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// NombreTextBox control.
+        /// CuentaidTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NombreTextBox;
+        protected global::System.Web.UI.WebControls.TextBox CuentaidTextBox;
         
         /// <summary>
-        /// RequiredFieldValidatorBalance control.
+        /// RequiredFieldValidatorconcepto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorBalance;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorconcepto;
         
         /// <summary>
         /// Label5 control.
@@ -103,13 +94,40 @@ namespace _1erParcial.UI.Registros {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// BalanceTextBox control.
+        /// ConceptoTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BalanceTextBox;
+        protected global::System.Web.UI.WebControls.TextBox ConceptoTextBox;
+        
+        /// <summary>
+        /// RequiredFieldValidatorMonto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorMonto;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+        
+        /// <summary>
+        /// MontoTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox MontoTextBox;
         
         /// <summary>
         /// BuscarButton control.
@@ -121,15 +139,6 @@ namespace _1erParcial.UI.Registros {
         protected global::System.Web.UI.WebControls.Button BuscarButton;
         
         /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-        
-        /// <summary>
         /// RequiredFieldValidatorfecha control.
         /// </summary>
         /// <remarks>
@@ -137,6 +146,15 @@ namespace _1erParcial.UI.Registros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorfecha;
+        
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// FechaTextBox control.
