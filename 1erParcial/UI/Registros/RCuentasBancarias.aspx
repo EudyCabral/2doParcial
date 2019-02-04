@@ -14,8 +14,6 @@
                 </div>
             </div>
             <div class="row">
-
-
                 <div class="columns" style="width: 350px;">
                     <div class="form-group">
                         <div class="row" style="align-items: center;">

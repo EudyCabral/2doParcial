@@ -66,7 +66,7 @@
                         <a class="nav-link dropdown-toggle" id="Cuentas" data-toggle="dropdown">Consultas
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Cuentas Bancarias</a>
+                            <a class="dropdown-item" href="http://localhost:49959/UI/Consultas/CCuentasBancarias.aspx">Cuentas Bancarias</a>
                               <a class="dropdown-item" href="#">Depositos</a>
                         </div>
                     </li>
@@ -85,9 +85,9 @@
     </form>
 
 
-    <footer  class="jumbotron text-center" style="margin-bottom:0; background-color: #0099FF" >
+<%--    <footer  class="jumbotron text-center" style="margin-bottom:0; background-color: #0099FF" >
           <p>&copy; <%: DateTime.Now.Year %> - CopyRight LabSoft RD</p>
-    </footer>
+    </footer>--%>
 
 
 </body>

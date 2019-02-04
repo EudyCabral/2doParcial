@@ -87,6 +87,8 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
+    <Content Include="UI\Consultas\CCuentasBancarias.aspx" />
+    <Content Include="UI\Consultas\CDepositos.aspx" />
     <Content Include="UI\Registros\RCuentasBancarias.aspx" />
     <Content Include="UI\Registros\RDepositos.aspx" />
     <Content Include="Web.config" />
@@ -109,6 +111,20 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\CCuentasBancarias.aspx.cs">
+      <DependentUpon>CCuentasBancarias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\CCuentasBancarias.aspx.designer.cs">
+      <DependentUpon>CCuentasBancarias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\CDepositos.aspx.cs">
+      <DependentUpon>CDepositos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\CDepositos.aspx.designer.cs">
+      <DependentUpon>CDepositos.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\RCuentasBancarias.aspx.cs">
       <DependentUpon>RCuentasBancarias.aspx</DependentUpon>
@@ -140,7 +156,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="UI\Consultas\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
