@@ -48,20 +48,34 @@ namespace BLL
             {
 
 
-                var depositoanterior = repositorio.Buscar(depositos.DepositoId);
+               
+
+
+
+               
+                //Buscar
+
+                var depositosanterior = repositorio.Buscar(depositos.DepositoId);
+
+                var Cuenta = contexto.cuentasbancarias.Find(depositos.CuentaId);
+                var Cuentasanterior = contexto.cuentasbancarias.Find(depositosanterior.CuentaId);
+
+                if(depositos.CuentaId != depositosanterior.CuentaId)
+                {
+                    Cuenta.Balance += depositos.Monto;
+                    Cuentasanterior.Balance -= depositosanterior.Monto;
+                }
+
+               
 
                 //identificar la diferencia ya sea restada o sumada
                 decimal diferencia;
-                diferencia = depositos.Monto - depositoanterior.Monto;
-
-                //Buscar
-                var cuentas = contexto.cuentasbancarias.Find(depositoanterior.CuentaId);
-
+                diferencia = depositos.Monto - depositosanterior.Monto;
+              
+              
+             
                 //aplicar diferencia al inventario 
-                cuentas.Balance += diferencia;
-
-
-
+                Cuenta.Balance += diferencia;
 
                 contexto.Entry(depositos).State = EntityState.Modified;
 
