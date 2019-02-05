@@ -61,5 +61,8 @@
       <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="scriptsDB\Scripts.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
