@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <title></title>
+     <link rel="shortcut icon" href="Img/icono.png" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
@@ -39,11 +40,12 @@
     <form id="form1" runat="server">
         <!-- Nav Bar-->
         <nav class="navbar navbar-expand-lg navbar-light bg" style="background-color: #0099FF" >
-  <a class="navbar-brand" href="http://localhost:49959/default.aspx">Soluciones A&G</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <asp:Image  class="navbar-brand" ID="Image1" runat="server" Height="35px" ImageUrl="~/Img/Logo.png" Width="50px" />
+    <a class="navbar-brand" href="http://localhost:49959/default.aspx">Soluciones A&G</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+            
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto" >
       <li class="nav-item active">
@@ -71,8 +73,10 @@
                         </div>
                     </li>
         <div style="justify-content:center;">
-    
-      <a href="http://localhost:49959/default.aspx" class="navbar-brand">Soluciones Almontes Gil</a>
+            
+ 
+  <a href="http://localhost:49959/default.aspx" class="navbar-brand">Soluciones Almontes Gil</a>
+ 
          </div>
     </ul>
   

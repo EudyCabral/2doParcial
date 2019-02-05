@@ -7,7 +7,7 @@
     <div class="form-group container">
         <h2 class="control-label" style="text-align: center">Consulta Cuentas Bancarias</h2>
     </div>
-    <div class="container" ">
+    <div class="container" >
     <div class="form-control" style="height:120px;" >
         <div class="col-sm-10" >
 
