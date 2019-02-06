@@ -18,6 +18,7 @@ namespace BLL
 
             try
             {
+               
 
                 if (contexto.depositos.Add(depositos) != null)
                 {
@@ -29,6 +30,8 @@ namespace BLL
 
                     contexto.SaveChanges();
                     paso = true;
+
+                   
                 }
                 contexto.Dispose();
 
@@ -46,12 +49,6 @@ namespace BLL
             Repositorio<Depositos> repositorio = new Repositorio<Depositos>();
             try
             {
-
-
-               
-
-
-
                
                 //Buscar
 
@@ -123,6 +120,22 @@ namespace BLL
             catch (Exception)
             {
                 throw;
+            }
+
+            return paso;
+        }
+
+        public bool VerificarDeposito(decimal deposito)
+        {
+            bool paso = false;
+
+            if(deposito > 0)
+            {
+                paso = true;
+            }
+            else
+            {
+                paso = false;
             }
 
             return paso;

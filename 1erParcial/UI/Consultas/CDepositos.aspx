@@ -23,8 +23,7 @@
                                 <asp:ListItem>CuentaId</asp:ListItem>
                                 <asp:ListItem>Concepto</asp:ListItem>
                                 <asp:ListItem>Monto</asp:ListItem>
-                                <asp:ListItem>Todos</asp:ListItem>
-                              
+                                <asp:ListItem>Todos</asp:ListItem>                            
              
                             </asp:DropDownList>
 

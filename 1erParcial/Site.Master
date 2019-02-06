@@ -5,98 +5,99 @@
 <html>
 <head runat="server">
     <title></title>
-     <link rel="shortcut icon" href="Img/icono.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="Img/icono.png" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-    	<link  href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
 
     <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" 
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" 
-    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    
-      <link href="content/toastr.css" rel="stylesheet" />
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <link href="content/toastr.css" rel="stylesheet" />
     <script src="Scripts/toastr.js"></script>
 
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 </head>
 
 
 <body>
 
-  
-  
+
+
     <form id="form1" runat="server">
         <!-- Nav Bar-->
-        <nav class="navbar navbar-expand-lg navbar-light bg" style="background-color: #0099FF" >
-                 <asp:Image  class="navbar-brand" ID="Image1" runat="server" Height="35px" ImageUrl="~/Img/Logo.png" Width="50px" />
-    <a class="navbar-brand" href="http://localhost:49959/default.aspx">Soluciones A&G</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg" style="background-color: #0099FF">
+            <asp:Image class="navbar-brand" ID="Image1" runat="server" Height="35px" ImageUrl="~/Img/Logo.png" Width="50px" />
+            <a class="navbar-brand" href="http://localhost:49959/default.aspx">Soluciones A&G</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-            
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto" >
-      <li class="nav-item active">
-        <a class="nav-link" href="http://localhost:49959/default.aspx">Inicio <span class="sr-only">(current)</span></a>
-      </li>
-     
-      <li class="nav-item dropdown" style="color: #000000;">
-        <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Registros
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="http://localhost:49959/UI/Registros/RCuentasBancarias.aspx">Cuentas Bancarias</a>
-          <a class="dropdown-item" href="http://localhost:49959/UI/Registros/RDepositos.aspx">Depositos</a>
-         </div>
-          </li>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="http://localhost:49959/default.aspx">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item dropdown" style="color: #000000;">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registros
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="http://localhost:49959/UI/Registros/RCuentasBancarias.aspx">Cuentas Bancarias</a>
+                            <a class="dropdown-item" href="http://localhost:49959/UI/Registros/RDepositos.aspx">Depositos</a>
+                        </div>
+                    </li>
+
+
                     <!-- Dropdown -->
-                    <li class="nav-item dropdown" style="width:300px">
+                    <li class="nav-item dropdown" style="width: 300px">
                         <a class="nav-link dropdown-toggle" id="Cuentas" data-toggle="dropdown">Consultas
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="http://localhost:49959/UI/Consultas/CCuentasBancarias.aspx">Cuentas Bancarias</a>
-                              <a class="dropdown-item" href="http://localhost:49959/UI/Consultas/CDepositos.aspx">Depositos</a>
+                            <a class="dropdown-item" href="http://localhost:49959/UI/Consultas/CDepositos.aspx">Depositos</a>
                         </div>
                     </li>
-        <div style="justify-content:center;">
-            
- 
-  <a href="http://localhost:49959/default.aspx" class="navbar-brand">Soluciones Almontes Gil</a>
- 
-         </div>
-    </ul>
-  
-  </div>
-</nav>
+                    <div style="justify-content: center;">
+
+
+                        <a href="http://localhost:49959/default.aspx" class="navbar-brand">Soluciones Almontes Gil</a>
+
+                    </div>
+                </ul>
+
+            </div>
+        </nav>
         <div style="margin-top: 50px">
-        
+
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-        
-            <hr/>
-           <footer  class="jumbotron text-center" style="margin-bottom:0; background-color: #0099FF" >
-          <p>&copy; <%: DateTime.Now.Year %> - CopyRight LabSoft RD</p>
-    </footer>
-           
-            </div>
+
+            <hr />
+            <footer class="jumbotron text-center" style="margin-bottom: 0; background-color: #0099FF">
+                <p>&copy; <%: DateTime.Now.Year %> - CopyRight LabSoft RD</p>
+            </footer>
+
+        </div>
     </form>
 
 
- 
+
 
 </body>
 </html>

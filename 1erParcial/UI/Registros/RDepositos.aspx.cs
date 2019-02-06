@@ -14,7 +14,7 @@ namespace _1erParcial.UI.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!Page.IsPostBack)
+            if (!Page.IsPostBack)
             {
                 DepositosidTextBox.Text = "0";
                 FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
@@ -41,18 +41,18 @@ namespace _1erParcial.UI.Registros
 
 
         }
-     
+
 
         public Depositos Llenaclase()
         {
             Depositos depositos = new Depositos();
 
-                depositos.DepositoId = util.ToInt(DepositosidTextBox.Text);
-                depositos.CuentaId = util.ToInt(CuentaidTextBox.Text);
-                depositos.Fecha = Convert.ToDateTime(FechaTextBox.Text);
-                depositos.Concepto = ConceptoTextBox.Text;
-                depositos.Monto = util.ToDecimal(MontoTextBox.Text);
- 
+            depositos.DepositoId = util.ToInt(DepositosidTextBox.Text);
+            depositos.CuentaId = util.ToInt(CuentaidTextBox.Text);
+            depositos.Fecha = Convert.ToDateTime(FechaTextBox.Text);
+            depositos.Concepto = ConceptoTextBox.Text;
+            depositos.Monto = util.ToDecimal(MontoTextBox.Text);
+
             return depositos;
         }
 
@@ -105,53 +105,63 @@ namespace _1erParcial.UI.Registros
             var validar = cuentas.Buscar(util.ToInt(CuentaidTextBox.Text));
 
             bool paso = false;
-
-
+        
             if (validar != null)
             {
 
                 if (Page.IsValid)
                 {
-                    if (DepositosidTextBox.Text == "0")
+                    if (repositorio.VerificarDeposito(util.ToDecimal(MontoTextBox.Text)))
                     {
-                        paso = repositorio.Guardar(depositos);
-
-                    }
-
-                    else
-                    {
-                        var verificar = repositorio.Buscar(util.ToInt(DepositosidTextBox.Text));
-                        if (verificar != null)
+                        if (DepositosidTextBox.Text == "0")
                         {
-                            paso = repositorio.Modificar(depositos);
+                            paso = repositorio.Guardar(depositos);
+
                         }
+
                         else
                         {
-                            ScriptManager.RegisterStartupScript(this, typeof(Page), "toastr_message", script:
-                         "toastr.error('Este Deposito No Existe','Fallo',{ 'progressBar': true,'positionClass': 'toast-bottom-right'});", addScriptTags: true);
-                            return;
+                            var verificar = repositorio.Buscar(util.ToInt(DepositosidTextBox.Text));
+                            if (verificar != null)
+                            {
+                                paso = repositorio.Modificar(depositos);
+                            }
+                            else
+                            {
+                                ScriptManager.RegisterStartupScript(this, typeof(Page), "toastr_message", script:
+                             "toastr.error('Este Deposito No Existe','Fallo',{ 'progressBar': true,'positionClass': 'toast-bottom-right'});", addScriptTags: true);
+                                return;
+                            }
                         }
+
+                        if (paso)
+
+                        {
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "toastr_message", script:
+                             "toastr.success('Deposito Registrado','Exito',{ 'progressBar': true,'positionClass': 'toast-bottom-right'});", addScriptTags: true);
+
+                        }
+
+                        else
+
+                        {
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "toastr_message", script:
+                         "toastr.error('No pudo Guardar','Fallo',{ 'progressBar': true,'positionClass': 'toast-bottom-right'});", addScriptTags: true);
+                        }
+                        Limpiar();
+                        return;
                     }
-
-                    if (paso)
-
-                    {
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "toastr_message", script:
-                         "toastr.success('Deposito Registrado','Exito',{ 'progressBar': true,'positionClass': 'toast-bottom-right'});", addScriptTags: true);
-
-                    }
-
                     else
-
                     {
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "toastr_message", script:
-                     "toastr.error('No pudo Guardar','Fallo',{ 'progressBar': true,'positionClass': 'toast-bottom-right'});", addScriptTags: true);
+                                "toastr.error('Debe Hacer un Deposit Mayor a 0','Fallo',{ 'progressBar': true,'positionClass': 'toast-bottom-right'});", addScriptTags: true);
+                        return;
                     }
-                    Limpiar();
-                    return;
+
+                  
                 }
 
-              
+
             }
             else
             {

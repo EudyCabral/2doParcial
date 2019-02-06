@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Registro Depositos" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RDepositos.aspx.cs" Inherits="_1erParcial.UI.Registros.RDepositos" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
@@ -12,13 +13,11 @@
                 </div>
             </div>
             <div class="row">
-
-
                 <div class="columns" style="width: 350px;">
                     <div class="form-group">
                         <div class="row" style="align-items: center;">
-                             <asp:RequiredFieldValidator ErrorMessage="*" ID="RequiredFieldValidatorId" ControlToValidate="DepositosidTextBox" Display="Static" runat="server" ForeColor="Red" ValidationGroup="ValidacionBE" ></asp:RequiredFieldValidator>
-                                
+                            <asp:RequiredFieldValidator ErrorMessage="*" ID="RequiredFieldValidatorId" ControlToValidate="DepositosidTextBox" Display="Static" runat="server" ForeColor="Red" ValidationGroup="ValidacionBE"></asp:RequiredFieldValidator>
+
                             <div style="width: 90px;">
                                 <asp:Label for="DepositosidTextBox" ID="Label6" runat="server" Text="Deposito Id:"></asp:Label>
                             </div>
@@ -28,8 +27,8 @@
 
                     <div class="form-group">
                         <div class="row" style="align-items: center;">
-                             <asp:RequiredFieldValidator ErrorMessage="*" ID="RequiredFieldValidatorcid" ControlToValidate="CuentaidTextBox" Display="Static" runat="server" ForeColor="Red" ValidationGroup="ValidacionGuardar" ></asp:RequiredFieldValidator>
-                                
+                            <asp:RequiredFieldValidator ErrorMessage="*" ID="RequiredFieldValidatorcid" ControlToValidate="CuentaidTextBox" Display="Static" runat="server" ForeColor="Red" ValidationGroup="ValidacionGuardar"></asp:RequiredFieldValidator>
+
                             <div style="width: 90px;">
                                 <asp:Label for="CuentaidTextBox" ID="Label1" runat="server" Text="Cuenta Id:"></asp:Label>
                             </div>
@@ -40,8 +39,8 @@
 
                     <div class="form-group">
                         <div class="row" style="align-items: center;">
-                             <asp:RequiredFieldValidator ErrorMessage="*" ID="RequiredFieldValidatorconcepto" ControlToValidate="ConceptoTextBox" Display="Static" runat="server" ForeColor="Red" ValidationGroup="ValidacionGuardar" ></asp:RequiredFieldValidator>
-                                
+                            <asp:RequiredFieldValidator ErrorMessage="*" ID="RequiredFieldValidatorconcepto" ControlToValidate="ConceptoTextBox" Display="Static" runat="server" ForeColor="Red" ValidationGroup="ValidacionGuardar"></asp:RequiredFieldValidator>
+
                             <div style="width: 90px;">
                                 <asp:Label for="ConceptoTextBox" ID="Label5" runat="server" Text="Concepto:"></asp:Label>
                             </div>
@@ -49,9 +48,9 @@
                         </div>
                     </div>
 
-                       <div class="form-group">
+                    <div class="form-group">
                         <div class="row" style="align-items: center;">
-                             <asp:RequiredFieldValidator ErrorMessage="*" ID="RequiredFieldValidatorMonto" ControlToValidate="MontoTextBox" Display="Static" runat="server" ForeColor="Red" ValidationGroup="ValidacionGuardar" ></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ErrorMessage="*" ID="RequiredFieldValidatorMonto" ControlToValidate="MontoTextBox" Display="Static" runat="server" ForeColor="Red" ValidationGroup="ValidacionGuardar"></asp:RequiredFieldValidator>
                             <div style="width: 90px;">
                                 <asp:Label for="MontoTextBox" ID="Label3" runat="server" Text="Monto:"></asp:Label>
                             </div>
@@ -69,14 +68,14 @@
                     </div>
                 </div>
 
-                <div class="columns" >
+                <div class="columns">
                     <div class="form-group">
                         <div class="row" style="align-items: center;">
-                             <asp:RequiredFieldValidator ErrorMessage="*" ID="RequiredFieldValidatorfecha" ControlToValidate="FechaTextBox" Display="Static" runat="server" ForeColor="Red" ValidationGroup="ValidacionGuardar" ></asp:RequiredFieldValidator>
-                            <div style="width:50px">
-                            <asp:Label for="FechaTextBox" ID="Label2" runat="server" Text="Fecha:"></asp:Label>
+                            <asp:RequiredFieldValidator ErrorMessage="*" ID="RequiredFieldValidatorfecha" ControlToValidate="FechaTextBox" Display="Static" runat="server" ForeColor="Red" ValidationGroup="ValidacionGuardar"></asp:RequiredFieldValidator>
+                            <div style="width: 50px">
+                                <asp:Label for="FechaTextBox" ID="Label2" runat="server" Text="Fecha:"></asp:Label>
                             </div>
-                                <asp:TextBox ID="FechaTextBox" runat="server" class="form-control" TextMode="Date" Width="180"></asp:TextBox>
+                            <asp:TextBox ID="FechaTextBox" runat="server" class="form-control" TextMode="Date" Width="180"></asp:TextBox>
 
                         </div>
                     </div>
@@ -93,8 +92,6 @@
                 <asp:Button ValidationGroup="ValidacionGuardar" ID="GuardarButton" class="btn btn-success" runat="server" Text="Guardar" OnClick="GuardarButton_Click" />
 
                 <asp:Button ValidationGroup="ValidacionBE" ID="ElminarButton" class="btn btn-danger" runat="server" Text="Eliminar" OnClick="ElminarButton_Click" />
-                 
-          
             </div>
         </div>
 
