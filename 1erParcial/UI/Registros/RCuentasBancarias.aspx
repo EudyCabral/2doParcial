@@ -52,7 +52,7 @@
                                 <asp:Label for="BalanceTextBox" ID="Label5" runat="server" Text="Balance:"></asp:Label>
                             </div>
 
-                            <asp:TextBox ID="BalanceTextBox" runat="server" class="form-control" TextMode="Number" placeholder="Balance" Width="250px"></asp:TextBox>
+                            <asp:TextBox ID="BalanceTextBox" runat="server" class="form-control" TextMode="Number" placeholder="Balance" Width="250px" ReadOnly="True">0</asp:TextBox>
                         </div>
                     </div>
 

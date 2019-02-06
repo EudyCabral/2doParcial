@@ -17,6 +17,7 @@ namespace _1erParcial.UI.Registros
             
             if (!Page.IsPostBack)
             {
+                BalanceTextBox.Text = "0";
                 CuentaidTextBox.Text = "0";
                 FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
             }
@@ -87,14 +88,14 @@ namespace _1erParcial.UI.Registros
             cuentas.CuentaId = util.ToInt(CuentaidTextBox.Text);
             cuentas.Fecha = Convert.ToDateTime(FechaTextBox.Text);
             cuentas.Nombre = NombreTextBox.Text;
-            cuentas.Balance = util.ToDecimal(BalanceTextBox.Text);
+            cuentas.Balance = 0;
             return cuentas;
         }
         public void Limpiar()
         {
             CuentaidTextBox.Text ="0";
             NombreTextBox.Text = string.Empty;
-            BalanceTextBox.Text = string.Empty;
+            BalanceTextBox.Text = 0.ToString();
             FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
@@ -118,9 +119,7 @@ namespace _1erParcial.UI.Registros
             else
             {
                 repositorio.Eliminar(id);
-
-
-
+                               
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "toastr_message", script:
                "toastr.success('Cuenta a sido Borrada','Eliminado',{ 'progressBar': true,'positionClass': 'toast-bottom-right'});", addScriptTags: true);
                 Limpiar();
@@ -143,7 +142,7 @@ namespace _1erParcial.UI.Registros
         public void LimpiarBE()
         {
             NombreTextBox.Text = string.Empty;
-            BalanceTextBox.Text = string.Empty;
+            BalanceTextBox.Text = "0";
             FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
         protected void BuscarButton_Click(object sender, EventArgs e)
