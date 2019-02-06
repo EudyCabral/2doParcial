@@ -62,7 +62,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="CuentaUnitTest.cs" />
+    <Compile Include="DepositoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +74,14 @@
     <ProjectReference Include="..\1erParcial\1erParcial.csproj">
       <Project>{752E6F79-46EB-4541-8BE0-61C1E1C33D63}</Project>
       <Name>1erParcial</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{A86D65D0-D711-493B-A5B8-28BA4652E2C4}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{DEDB9DE2-A994-4E93-ACA0-A2C760C64CD4}</Project>
+      <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
