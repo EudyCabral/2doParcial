@@ -60,6 +60,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="http://localhost:49959/UI/Registros/RCuentasBancarias.aspx">Cuentas Bancarias</a>
                             <a class="dropdown-item" href="http://localhost:49959/UI/Registros/RDepositos.aspx">Depositos</a>
+                         <a class="dropdown-item" href="http://localhost:49959/UI/Registros/Prestamo.aspx">Prestamos</a>
+                      
                         </div>
                     </li>
 

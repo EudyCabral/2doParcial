@@ -90,7 +90,7 @@ namespace BLL
 
 
 
-        public T Buscar(int id)
+        public virtual T Buscar(int id)
         {
             T entity;
             try
