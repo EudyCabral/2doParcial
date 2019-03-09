@@ -19,7 +19,12 @@ namespace BLL
             {
                 prestamos = _contexto.prestamos.Find(id);
                 prestamos.Detalles.Count();
-              
+
+                foreach (var item in prestamos.Detalles)
+                {
+                    string s = item.prestamos.NombreCuenta;
+
+                }
              
             }
             catch (Exception)
