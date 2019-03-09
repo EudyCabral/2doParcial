@@ -25,7 +25,7 @@ namespace BLL
                     string s = item.prestamos.NombreCuenta;
 
                 }
-             
+
             }
             catch (Exception)
             {
@@ -38,7 +38,7 @@ namespace BLL
         {
 
             bool paso = false;
-       
+
             Repositorio<Depositos> repositorio = new Repositorio<Depositos>();
             try
             {
@@ -57,7 +57,7 @@ namespace BLL
                 {
                     paso = true;
                 }
-             
+
 
             }
             catch (Exception) { throw; }
@@ -65,8 +65,38 @@ namespace BLL
             return paso;
         }
 
+        public decimal CapitalCuota(decimal capital, int tiempo)
+        {
+            decimal capitalcuota = 0;
+
+            capitalcuota = capital / tiempo;
+
+            return capitalcuota;
+        }
 
 
+        public decimal InteresCuota(decimal capital, int tiempo, decimal interes)
+        {
+            decimal interesCuota = 0;
+            interes /= 100;
 
+            interesCuota = CapitalCuota(capital, tiempo) * interes;
+
+            return interesCuota;
+        }
+
+        public decimal BalanceCuota(decimal capital, int tiempo, decimal interes)
+        {
+            decimal BalanceCuota = 0;
+           
+            interes /= 100;
+
+            decimal ci = (capital * interes) + capital;
+            decimal pa = CapitalCuota(capital, tiempo) + (CapitalCuota(capital, tiempo) *interes);
+            BalanceCuota =  ci - pa;
+            return BalanceCuota;
+
+
+        }
     }
 }

@@ -72,7 +72,7 @@
                 <asp:TextBox ID="TiempoTextBox" class="form-control " runat="server"></asp:TextBox>
                   </div>
                   <div class="col-md-3 col-sm-3 col-xl-3 col-3">
-                    <asp:Button ID="CalcularButton" runat="server" Text="Calcular" class="btn btn-success" />
+                    <asp:Button ID="CalcularButton" runat="server" Text="Calcular" class="btn btn-success" OnClick="CalcularButton_Click" />
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
        <div class="row" style="justify-content: center;">
             <div class="form-group">
 
-                <asp:Button ID="LimpiarButton" class="btn btn-info" runat="server" Text="Limpiar"  />
+                <asp:Button ID="LimpiarButton" class="btn btn-info" runat="server" Text="Limpiar" OnClick="LimpiarButton_Click"  />
 
                 <asp:Button ValidationGroup="ValidacionGuardar" ID="GuardarButton" class="btn btn-success" runat="server" Text="Guardar" />
 
