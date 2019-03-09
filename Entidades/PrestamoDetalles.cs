@@ -12,8 +12,9 @@ namespace Entidades
     public class PrestamoDetalles
     {
         [Key]
-        public int Cuota { get; set; }
+        public int Id { get; set; }
         public int PrestamoId { get; set; }
+        public int NCuota { get; set; }
         public DateTime Fecha { get; set; }
         public decimal Interes { get; set; }
         public decimal Capital { get; set; }
@@ -26,18 +27,20 @@ namespace Entidades
 
         public PrestamoDetalles()
         {
-            Cuota = 0;
+            Id = 0;
             PrestamoId = 0;
+            NCuota = 0;
             Fecha = DateTime.Now;
             Interes = 0;
             Capital = 0;
             Balance = 0;
         }
 
-        public PrestamoDetalles(int cuota, int prestamoId, DateTime fecha, decimal interes, decimal capital, decimal balance)
+        public PrestamoDetalles(int cuota, int prestamoId, int ncuota, DateTime fecha, decimal interes, decimal capital, decimal balance)
         {
-            Cuota = cuota;
+            Id = cuota;
             PrestamoId = prestamoId;
+            NCuota = ncuota;
             Fecha = fecha;
             Interes = interes;
             Capital = capital;

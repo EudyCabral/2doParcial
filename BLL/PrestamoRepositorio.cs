@@ -18,14 +18,17 @@ namespace BLL
             try
             {
                 prestamos = _contexto.prestamos.Find(id);
-                prestamos.Detalles.Count();
 
-                foreach (var item in prestamos.Detalles)
+                if (prestamos != null)
                 {
-                    string s = item.prestamos.NombreCuenta;
+                    prestamos.Detalles.Count();
 
+                    foreach (var item in prestamos.Detalles)
+                    {
+                       // string s = item.prestamos.NombreCuenta;
+
+                    }
                 }
-
             }
             catch (Exception)
             {
@@ -42,10 +45,22 @@ namespace BLL
             Repositorio<Depositos> repositorio = new Repositorio<Depositos>();
             try
             {
+                //Buscar la entidades que no estan para removerlas
+                var anterior = _contexto.prestamos.Find(prestamos.PrestamoId);
+
+                foreach (var item in anterior.Detalles)
+                {
+                    if(!prestamos.Detalles.Exists(x => x.Id == item.Id))
+                    {
+                     
+                        _contexto.Entry(item).State = EntityState.Deleted;
+                    }
+
+                }
 
                 foreach (var item in prestamos.Detalles)
                 {
-                    var estado = item.Cuota > 0 ? EntityState.Modified : EntityState.Added;
+                    var estado = item.Id > 0 ? EntityState.Modified : EntityState.Added;
                     _contexto.Entry(item).State = estado;
 
                 }

@@ -33,9 +33,9 @@ namespace Entidades
             Tiempo = 0;
         }
 
-        public void AgregarDetalle(int cuota, int prestamoId, DateTime fecha, decimal interes, decimal capital, decimal balance)
+        public void AgregarDetalle(int id, int prestamoId,int ncuota, DateTime fecha, decimal interes, decimal capital, decimal balance)
         {
-            this.Detalles.Add(new PrestamoDetalles(cuota, prestamoId, fecha, interes, capital, balance));
+            this.Detalles.Add(new PrestamoDetalles(id, prestamoId,ncuota, fecha, interes, capital, balance));
         }
 
         

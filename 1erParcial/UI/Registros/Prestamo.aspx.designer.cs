@@ -31,13 +31,22 @@ namespace _1erParcial.UI.Registros {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// DepositoIdTextBox control.
+        /// PrestamoidRequiredFieldValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DepositoIdTextBox;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PrestamoidRequiredFieldValidator;
+        
+        /// <summary>
+        /// PrestamoidTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox PrestamoidTextBox;
         
         /// <summary>
         /// BuscarButton control.
@@ -85,6 +94,15 @@ namespace _1erParcial.UI.Registros {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
+        /// CapitalRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CapitalRequiredFieldValidator;
+        
+        /// <summary>
         /// CapitalTextBox control.
         /// </summary>
         /// <remarks>
@@ -103,6 +121,15 @@ namespace _1erParcial.UI.Registros {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
+        /// InteresRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator InteresRequiredFieldValidator;
+        
+        /// <summary>
         /// InteresTextBox control.
         /// </summary>
         /// <remarks>
@@ -119,6 +146,15 @@ namespace _1erParcial.UI.Registros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label5;
+        
+        /// <summary>
+        /// TiempoRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator TiempoRequiredFieldValidator;
         
         /// <summary>
         /// TiempoTextBox control.
@@ -146,6 +182,15 @@ namespace _1erParcial.UI.Registros {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView DetalleGridView;
+        
+        /// <summary>
+        /// ImprimirButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ImprimirButton;
         
         /// <summary>
         /// LimpiarButton control.
