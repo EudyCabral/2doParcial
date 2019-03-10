@@ -127,9 +127,9 @@ namespace _1erParcial.UI.Registros
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
       
-            if(DetalleGridView.DataSource == null)
+            if(DetalleGridView.Rows.Count == 0)
             {
-                util.ShowToastr(this.Page, "El Grid esta Vacio, Favor de llenar!!", "Informacio!!", "info");
+                util.ShowToastr(this.Page, "El Grid esta Vacio, Favor de hacer el Calculo!!", "Informacio!!", "info");
                 return;
             }
             PrestamoRepositorio prestamoRepositorio = new PrestamoRepositorio();
@@ -142,7 +142,16 @@ namespace _1erParcial.UI.Registros
             }
             else
             {
-                paso = prestamoRepositorio.Modificar(prestamos);
+                var verificar = prestamoRepositorio.Buscar(util.ToInt(PrestamoidTextBox.Text));
+                if (verificar != null)
+                {
+                    paso = prestamoRepositorio.Modificar(prestamos);
+                }
+                else
+                {
+                    util.ShowToastr(this.Page, "El Formulario que intenta modificar, no Existe!!", "Informacion!!", "info");
+                    return;
+                }
             }
 
             if (paso)
@@ -246,10 +255,5 @@ namespace _1erParcial.UI.Registros
             }
         }
 
-        protected void ImprimirButton_Click(object sender, EventArgs e)
-        {
-            Response.Redirect(@"~\WReportes\RepPrestamo.aspx");
-            
-        }
     }
 }

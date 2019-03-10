@@ -6,28 +6,28 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.73177in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.86458in</Width>
+              <Width>0.59635in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.79167in</Width>
+              <Width>0.52344in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.375in</Width>
+              <Width>1.10677in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.73177in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.73177in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.73177in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.73177in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -688,9 +688,10 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <Top>0.33209in</Top>
+        <Top>0.20709in</Top>
+        <Left>0.375in</Left>
         <Height>0.5in</Height>
-        <Width>8.03125in</Width>
+        <Width>5.88542in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -717,8 +718,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox60</rd:DefaultName>
-        <Top>0.85293in</Top>
-        <Left>0.86333in</Left>
+        <Top>0.72793in</Top>
+        <Left>1.23833in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>1</ZIndex>
@@ -753,7 +754,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox61</rd:DefaultName>
-        <Top>0.85293in</Top>
+        <Top>0.72793in</Top>
+        <Left>0.25in</Left>
         <Height>0.25in</Height>
         <Width>0.96181in</Width>
         <ZIndex>2</ZIndex>
@@ -771,7 +773,7 @@
     <Height>4.32292in</Height>
     <Style />
   </Body>
-  <Width>8.15625in</Width>
+  <Width>7.48958in</Width>
   <Page>
     <PageHeader>
       <Height>2.08208in</Height>
@@ -783,7 +785,7 @@
           <Value>Logo</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.125in</Top>
-          <Left>2.8125in</Left>
+          <Left>2.3125in</Left>
           <Height>0.91667in</Height>
           <Width>2.33333in</Width>
           <Style>
@@ -821,7 +823,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox88</rd:DefaultName>
           <Top>1.16666in</Top>
-          <Left>2.57292in</Left>
+          <Left>2.07292in</Left>
           <Height>0.57986in</Height>
           <Width>2.78125in</Width>
           <ZIndex>1</ZIndex>
@@ -856,7 +858,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox40</rd:DefaultName>
           <Top>1.75917in</Top>
-          <Left>2.57292in</Left>
+          <Left>2.07292in</Left>
           <Height>0.25in</Height>
           <Width>2.78125in</Width>
           <ZIndex>2</ZIndex>

@@ -1,4 +1,5 @@
 ﻿using _1erParcial.Utilidades;
+using _1erParcial.WReportes;
 using BLL;
 using Entidades;
 using System;
@@ -34,11 +35,14 @@ namespace _1erParcial.UI.Consultas
             }
         }
 
+        Expression<Func<Prestamos, bool>> filtro = x => true;
+
         private void Filtro()
         {
             PrestamoGridView.DataBind();
-            Expression<Func<Prestamos, bool>> filtro = x => true;
+          
             Repositorio<Prestamos> repositorio = new Repositorio<Prestamos>();
+
 
             int id;
 
@@ -116,8 +120,14 @@ namespace _1erParcial.UI.Consultas
             }
 
             PrestamoGridView.DataSource = repositorio.GetList(filtro);
+         
             PrestamoGridView.DataBind();
-            ImprimirButton.Visible = true;
+
+            if (PrestamoGridView.Rows.Count > 0)
+            {
+                ImprimirButton.Visible = true;
+            }
+            else { ImprimirButton.Visible = false; }
             TextCriterio.Text = "";
         }
 
@@ -125,10 +135,14 @@ namespace _1erParcial.UI.Consultas
         {
             Filtro();
         }
+    
+
 
         protected void ImprimirButton_Click(object sender, EventArgs e)
         {
+          
             Response.Redirect(@"~\WReportes\RepPrestamo.aspx");
+                
         }
     }
 }
