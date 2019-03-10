@@ -144,6 +144,7 @@
     <Content Include="UI\Registros\RCuentasBancarias.aspx" />
     <Content Include="UI\Registros\RDepositos.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WReportes\RepCuentas.aspx" />
     <Content Include="WReportes\RepPrestamo.aspx" />
     <Content Include="_1erParcialDbDataSet.xsc">
       <DependentUpon>_1erParcialDbDataSet.xsd</DependentUpon>
@@ -225,6 +226,13 @@
       <DependentUpon>RDepositos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utilidades\util.cs" />
+    <Compile Include="WReportes\RepCuentas.aspx.cs">
+      <DependentUpon>RepCuentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WReportes\RepCuentas.aspx.designer.cs">
+      <DependentUpon>RepCuentas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WReportes\RepPrestamo.aspx.cs">
       <DependentUpon>RepPrestamo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -59,7 +59,7 @@ namespace _1erParcial.UI.Registros
             FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
             ViewState["Prestamos"] = new Prestamos();
             this.BindGrid();
-            ImprimirButton.Visible = false;
+          
             BalanceTextBox.Visible = false;
             Labelbalance.Visible = false;
         }
@@ -119,9 +119,7 @@ namespace _1erParcial.UI.Registros
                 this.BindGrid();
 
             }
-           
-
-            ImprimirButton.Visible = true;
+      
             BalanceTextBox.Visible = true;
             Labelbalance.Visible = true;
         }
@@ -237,7 +235,6 @@ namespace _1erParcial.UI.Registros
             {
                 Limpiar();
                 Llenacampos(prestamo);
-                ImprimirButton.Visible = true;
                 BalanceTextBox.Visible = true;
                 Labelbalance.Visible = true;
                 util.ShowToastr(this, "Busqueda exitosa", "Exito", "success");
@@ -251,7 +248,7 @@ namespace _1erParcial.UI.Registros
 
         protected void ImprimirButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect(@"~/ WReportes / RepPrestamo.aspx");
+            Response.Redirect(@"~\WReportes\RepPrestamo.aspx");
             
         }
     }

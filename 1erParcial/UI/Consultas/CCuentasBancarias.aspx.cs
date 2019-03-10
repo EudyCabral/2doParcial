@@ -123,9 +123,13 @@ namespace _1erParcial.UI.Consultas
             CuentasGridView.DataSource = repositorio.GetList(filtro);
             CuentasGridView.DataBind();
 
-            
+            ImprimirButton.Visible = true;
 
         }
 
+        protected void ImprimirButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(@"~\WReportes\RepCuentas.aspx");
+        }
     }
 }

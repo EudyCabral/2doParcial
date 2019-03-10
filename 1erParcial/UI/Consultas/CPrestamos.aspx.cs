@@ -117,12 +117,18 @@ namespace _1erParcial.UI.Consultas
 
             PrestamoGridView.DataSource = repositorio.GetList(filtro);
             PrestamoGridView.DataBind();
+            ImprimirButton.Visible = true;
             TextCriterio.Text = "";
         }
 
         protected void ButtonBuscar_Click(object sender, EventArgs e)
         {
             Filtro();
+        }
+
+        protected void ImprimirButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(@"~\WReportes\RepPrestamo.aspx");
         }
     }
 }
