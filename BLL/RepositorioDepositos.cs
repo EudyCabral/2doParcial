@@ -23,9 +23,9 @@ namespace BLL
                 if (contexto.depositos.Add(depositos) != null)
                 {
 
-                    var cuenta = contexto.cuentasbancarias.Find(depositos.CuentaId);
+                    var cuenta = contexto.cuentasbancarias.Find(depositos.CuentaId).Balance += depositos.Monto;
                     //Incrementar el balance
-                    cuenta.Balance += depositos.Monto;
+                    
 
 
                     contexto.SaveChanges();

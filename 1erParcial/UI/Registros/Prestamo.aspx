@@ -109,9 +109,16 @@
 
         <div class="form-group">
            <div class="row" style="align-items:center;">
-       
-                    <asp:Button ID="ImprimirButton" runat="server" Text="Imprimir" class="btn btn-success" ValidationGroup="ValidacionGC" Enabled="True" EnableViewState="True" Visible="False" />
-                
+        <div class="col-md-3 col-sm-3 col-xl-3 col-3"> 
+                    <asp:Button ID="ImprimirButton" runat="server" Text="Imprimir" class="btn btn-success" ValidationGroup="ValidacionGC" Enabled="True" EnableViewState="True" Visible="False" OnClick="ImprimirButton_Click" />
+                   </div>
+
+               <asp:Label ID="Labelbalance" class="col-md-1 control-label" runat="server" Text="Balance:" Visible="False"></asp:Label>
+          <div class="col-md-2 col-sm-2 col-xl-2 col-2">
+             
+                <asp:TextBox ID="BalanceTextBox" class="form-control " runat="server" TextMode="Number" ReadOnly="True" Visible="False"></asp:TextBox>
+               
+                </div>
             </div>
         </div>  
 

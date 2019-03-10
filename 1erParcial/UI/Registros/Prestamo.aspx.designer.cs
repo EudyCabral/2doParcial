@@ -193,6 +193,24 @@ namespace _1erParcial.UI.Registros {
         protected global::System.Web.UI.WebControls.Button ImprimirButton;
         
         /// <summary>
+        /// Labelbalance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Labelbalance;
+        
+        /// <summary>
+        /// BalanceTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox BalanceTextBox;
+        
+        /// <summary>
         /// LimpiarButton control.
         /// </summary>
         /// <remarks>

@@ -80,6 +80,8 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="http://localhost:49959/UI/Consultas/CCuentasBancarias.aspx">Cuentas Bancarias</a>
                             <a class="dropdown-item" href="http://localhost:49959/UI/Consultas/CDepositos.aspx">Depositos</a>
+                          <a class="dropdown-item" href="http://localhost:49959/UI/Consultas/CPrestamos.aspx">Prestamos</a>
+                      
                         </div>
                     </li>
                     <div style="justify-content: center;">

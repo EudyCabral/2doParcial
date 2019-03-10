@@ -52,7 +52,7 @@ namespace _1erParcial.UI.Registros
             depositos.Fecha = Convert.ToDateTime(FechaTextBox.Text);
             depositos.Concepto = ConceptoTextBox.Text;
             depositos.Monto = util.ToDecimal(MontoTextBox.Text);
-
+            
             return depositos;
         }
 

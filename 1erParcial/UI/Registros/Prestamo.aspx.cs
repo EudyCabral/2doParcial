@@ -60,6 +60,8 @@ namespace _1erParcial.UI.Registros
             ViewState["Prestamos"] = new Prestamos();
             this.BindGrid();
             ImprimirButton.Visible = false;
+            BalanceTextBox.Visible = false;
+            Labelbalance.Visible = false;
         }
 
 
@@ -70,8 +72,7 @@ namespace _1erParcial.UI.Registros
 
         protected void CalcularButton_Click(object sender, EventArgs e)
         {
-
-
+           
             ViewState["Prestamos"] = new Prestamos();
             this.BindGrid();
 
@@ -88,7 +89,7 @@ namespace _1erParcial.UI.Registros
             decimal interes = Utilidades.util.ToInt(InteresTextBox.Text);
             int tiempo = Utilidades.util.ToInt(TiempoTextBox.Text);
             decimal capital = Utilidades.util.ToDecimal(CapitalTextBox.Text);
-
+            BalanceTextBox.Text = repositorio.BalanceCuota(capital, interes).ToString();
             interes /= 100;
 
             for (int i = 1; i <= fila; i++)
@@ -118,21 +119,28 @@ namespace _1erParcial.UI.Registros
                 this.BindGrid();
 
             }
+           
 
             ImprimirButton.Visible = true;
-
+            BalanceTextBox.Visible = true;
+            Labelbalance.Visible = true;
         }
 
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
-            Repositorio<Prestamos> repositorio = new Repositorio<Prestamos>();
+      
+            if(DetalleGridView.DataSource == null)
+            {
+                util.ShowToastr(this.Page, "El Grid esta Vacio, Favor de llenar!!", "Informacio!!", "info");
+                return;
+            }
             PrestamoRepositorio prestamoRepositorio = new PrestamoRepositorio();
             Prestamos prestamos = LlenaClase();
             bool paso = false;
 
             if (prestamos.PrestamoId == 0)
             {
-                paso = repositorio.Guardar(prestamos);
+                paso = prestamoRepositorio.Guardar(prestamos);
             }
             else
             {
@@ -161,6 +169,7 @@ namespace _1erParcial.UI.Registros
             prestamo.Capital = util.ToInt(CapitalTextBox.Text);
             prestamo.Interes = util.ToInt(InteresTextBox.Text);
             prestamo.Tiempo = util.ToInt(TiempoTextBox.Text);
+            prestamo.Balance = util.ToDecimal(BalanceTextBox.Text);
 
             return prestamo;
 
@@ -182,6 +191,7 @@ namespace _1erParcial.UI.Registros
 
         protected void ElminarButton_Click(object sender, EventArgs e)
         {
+           
             int id = util.ToInt(PrestamoidTextBox.Text);
 
             PrestamoRepositorio repositorio = new PrestamoRepositorio();
@@ -209,6 +219,7 @@ namespace _1erParcial.UI.Registros
             CapitalTextBox.Text = prestamos.Capital.ToString();
             InteresTextBox.Text = prestamos.Interes.ToString();
             TiempoTextBox.Text = prestamos.Tiempo.ToString();
+            BalanceTextBox.Text = prestamos.Balance.ToString();
 
             filtro = x => x.PrestamoId == prestamos.PrestamoId;
             DetalleGridView.DataSource = repositorio.GetList(filtro);
@@ -218,6 +229,7 @@ namespace _1erParcial.UI.Registros
 
         protected void BuscarButton_Click(object sender, EventArgs e)
         {
+            
             PrestamoRepositorio repositorio = new PrestamoRepositorio();
             var prestamo = repositorio.Buscar(util.ToInt(PrestamoidTextBox.Text));
 
@@ -226,6 +238,8 @@ namespace _1erParcial.UI.Registros
                 Limpiar();
                 Llenacampos(prestamo);
                 ImprimirButton.Visible = true;
+                BalanceTextBox.Visible = true;
+                Labelbalance.Visible = true;
                 util.ShowToastr(this, "Busqueda exitosa", "Exito", "success");
             }
             else
@@ -233,6 +247,12 @@ namespace _1erParcial.UI.Registros
                 util.ShowToastr(this.Page, "El usuario que intenta buscar no existe", "Error", "error");
                 Limpiar();
             }
+        }
+
+        protected void ImprimirButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(@"~/ WReportes / RepPrestamo.aspx");
+            
         }
     }
 }

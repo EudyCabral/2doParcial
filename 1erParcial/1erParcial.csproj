@@ -103,6 +103,17 @@
     <Content Include="Global.asax" />
     <Content Include="content\toastr.scss" />
     <Content Include="content\toastr.less" />
+    <Content Include="SAGDBDataSet.xsc">
+      <DependentUpon>SAGDBDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="SAGDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SAGDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="SAGDBDataSet.xss">
+      <DependentUpon>SAGDBDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.6.3-vsdoc.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Img\icono.png" />
@@ -128,10 +139,12 @@
     </Content>
     <Content Include="UI\Consultas\CCuentasBancarias.aspx" />
     <Content Include="UI\Consultas\CDepositos.aspx" />
+    <Content Include="UI\Consultas\CPrestamos.aspx" />
     <Content Include="UI\Registros\Prestamo.aspx" />
     <Content Include="UI\Registros\RCuentasBancarias.aspx" />
     <Content Include="UI\Registros\RDepositos.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WReportes\RepPrestamo.aspx" />
     <Content Include="_1erParcialDbDataSet.xsc">
       <DependentUpon>_1erParcialDbDataSet.xsd</DependentUpon>
     </Content>
@@ -156,6 +169,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SAGDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SAGDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -177,6 +195,13 @@
     </Compile>
     <Compile Include="UI\Consultas\CDepositos.aspx.designer.cs">
       <DependentUpon>CDepositos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\CPrestamos.aspx.cs">
+      <DependentUpon>CPrestamos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\CPrestamos.aspx.designer.cs">
+      <DependentUpon>CPrestamos.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\Prestamo.aspx.cs">
       <DependentUpon>Prestamo.aspx</DependentUpon>
@@ -200,6 +225,13 @@
       <DependentUpon>RDepositos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utilidades\util.cs" />
+    <Compile Include="WReportes\RepPrestamo.aspx.cs">
+      <DependentUpon>RepPrestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WReportes\RepPrestamo.aspx.designer.cs">
+      <DependentUpon>RepPrestamo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="_1erParcialDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -233,6 +265,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\Cuentas.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportePrestamo.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

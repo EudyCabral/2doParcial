@@ -18,6 +18,7 @@ namespace Entidades
         public decimal Capital { get; set; }
         public int Interes { get; set; }
         public int Tiempo { get; set; }
+        public decimal Balance { get; set; }
 
         public virtual List<PrestamoDetalles> Detalles { get; set; }
 
@@ -31,6 +32,7 @@ namespace Entidades
             Capital = 0;
             Interes = 0;
             Tiempo = 0;
+            Balance = 0;
         }
 
         public void AgregarDetalle(int id, int prestamoId,int ncuota, DateTime fecha, decimal interes, decimal capital, decimal balance)
