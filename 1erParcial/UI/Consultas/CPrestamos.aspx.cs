@@ -24,18 +24,21 @@ namespace _1erParcial.UI.Consultas
             }
         }
 
+       
+        Expression<Func<Prestamos, bool>> filtro = x => true;
+
         public void Mensaje()
         {
-            Expression<Func<Prestamos, bool>> filtro = x => true;
+
             Repositorio<Prestamos> repositorio = new Repositorio<Prestamos>();
             if (repositorio.GetList(filtro).Count() == 0)
             {
-                util.ShowToastr(this.Page, "No Existe", "Informacion", "error");
+                util.ShowToastr(this.Page, "No Existe", "Informacion", "info");
                 return;
             }
+
         }
 
-        Expression<Func<Prestamos, bool>> filtro = x => true;
 
         private void Filtro()
         {
@@ -43,7 +46,7 @@ namespace _1erParcial.UI.Consultas
           
             Repositorio<Prestamos> repositorio = new Repositorio<Prestamos>();
 
-
+      
             int id;
 
             DateTime desde = Convert.ToDateTime(DesdeTextBox.Text);
@@ -56,11 +59,8 @@ namespace _1erParcial.UI.Consultas
                     id = util.ToInt(TextCriterio.Text);
                   
                         filtro = x => x.PrestamoId == id && (x.Fecha >= desde && x.Fecha <= hasta);
-
                     Mensaje();
-        
-
-                        break;
+                    break;
 
                 case 1:// CuentaId
                     int cuentaid = util.ToInt(TextCriterio.Text);

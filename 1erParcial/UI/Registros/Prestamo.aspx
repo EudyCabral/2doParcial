@@ -106,6 +106,12 @@
                             <SortedDescendingHeaderStyle BackColor="#4870BE" />
                         </asp:GridView>
              </div>
+          
+    <%--    <div class="form-group">
+           <div class="row" style="align-items:center;">
+        <div class="col-md-3 col-sm-3 col-xl-3 col-3"> 
+                    <asp:Button ID="ImprimirButton" runat="server" Text="Imprimir" class="btn btn-success" ValidationGroup="ValidacionGC" Enabled="True" EnableViewState="True" Visible="True" OnClick="ImprimirButton_Click"  />
+                   </div></div></div>--%>
 
         <div class="form-group">
            <div class="row" style="align-items:center;">

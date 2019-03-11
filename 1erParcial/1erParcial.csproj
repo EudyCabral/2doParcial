@@ -114,6 +114,17 @@
     <Content Include="SAGDBDataSet.xss">
       <DependentUpon>SAGDBDataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="SAGDBDataSetPrestamo.xsc">
+      <DependentUpon>SAGDBDataSetPrestamo.xsd</DependentUpon>
+    </Content>
+    <None Include="SAGDBDataSetPrestamo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SAGDBDataSetPrestamo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="SAGDBDataSetPrestamo.xss">
+      <DependentUpon>SAGDBDataSetPrestamo.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.6.3-vsdoc.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Img\icono.png" />
@@ -145,6 +156,7 @@
     <Content Include="UI\Registros\RDepositos.aspx" />
     <Content Include="Web.config" />
     <Content Include="WReportes\RepCuentas.aspx" />
+    <Content Include="WReportes\RepDPrestamo.aspx" />
     <Content Include="WReportes\RepPrestamo.aspx" />
     <Content Include="_1erParcialDbDataSet.xsc">
       <DependentUpon>_1erParcialDbDataSet.xsd</DependentUpon>
@@ -174,6 +186,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SAGDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SAGDBDataSetPrestamo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SAGDBDataSetPrestamo.xsd</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -233,6 +250,13 @@
     <Compile Include="WReportes\RepCuentas.aspx.designer.cs">
       <DependentUpon>RepCuentas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WReportes\RepDPrestamo.aspx.cs">
+      <DependentUpon>RepDPrestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WReportes\RepDPrestamo.aspx.designer.cs">
+      <DependentUpon>RepDPrestamo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WReportes\RepPrestamo.aspx.cs">
       <DependentUpon>RepPrestamo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -273,6 +297,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\Cuentas.rdlc" />
+    <EmbeddedResource Include="Reportes\Prestamo.rdlc" />
     <EmbeddedResource Include="Reportes\ReportePrestamo.rdlc" />
   </ItemGroup>
   <PropertyGroup>

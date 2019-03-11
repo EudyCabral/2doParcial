@@ -255,5 +255,10 @@ namespace _1erParcial.UI.Registros
             }
         }
 
+        //protected void ImprimirButton_Click(object sender, EventArgs e)
+        //{
+        //    Response.Redirect(@"~\WReportes\RepDPrestamo.aspx");
+
+        //}
     }
 }

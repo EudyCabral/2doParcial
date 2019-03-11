@@ -52,15 +52,7 @@
 
                     <div class="row" style="align-items: center;">
 
-                        <div class="columns" style="width: 150px;">
-                            <div class="form-group">
-                                <div class="row" style="align-items: center;">
-                                    <asp:CheckBox ID="Fechacheckbox" Text="Filtra por Fecha" runat="server" />
-                                    
-                                </div>
-                            </div>
-                        </div>
-
+                    
                         <div class="columns" style="width: 300px;">
                             <div class="form-group">
                                 <div class="row" style="align-items: center;">
