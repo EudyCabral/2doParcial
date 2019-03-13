@@ -142,8 +142,8 @@ namespace _1erParcial.UI.Consultas
         protected void ImprimirButton_Click(object sender, EventArgs e)
         {
           
-            Response.Redirect(@"~\WReportes\RepPrestamo.aspx");
-                
+   
+            Response.Write("<script>window.open('/WReportes/RepPrestamo.aspx','_blank');</script");
         }
     }
 }

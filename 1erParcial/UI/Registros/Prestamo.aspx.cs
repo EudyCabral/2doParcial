@@ -59,7 +59,6 @@ namespace _1erParcial.UI.Registros
             FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
             ViewState["Prestamos"] = new Prestamos();
             this.BindGrid();
-            ImprimirButton.Visible = false;
             BalanceTextBox.Visible = false;
             Labelbalance.Visible = false;
         }
@@ -75,7 +74,7 @@ namespace _1erParcial.UI.Registros
            
             ViewState["Prestamos"] = new Prestamos();
             this.BindGrid();
-            ImprimirButton.Visible = false;
+      
 
             PrestamoRepositorio repositorio = new PrestamoRepositorio();
             Prestamos prestamo = new Prestamos();
@@ -115,9 +114,9 @@ namespace _1erParcial.UI.Registros
                 prestamo.AgregarDetalle(0, Utilidades.util.ToInt(PrestamoidTextBox.Text), i, cuota.Fecha.AddMonths(i), cuota.Interes, cuota.Capital, cuota.Balance);
 
                 ViewState["Prestamos"] = prestamo;
-
+          
                 this.BindGrid();
-
+             
             }
       
             BalanceTextBox.Visible = true;
@@ -140,16 +139,16 @@ namespace _1erParcial.UI.Registros
             {
 
                 paso = prestamoRepositorio.Guardar(prestamos);
-                ImprimirButton.Visible = true;
+     
 
             }
             else
-            {
+                {
                 var verificar = prestamoRepositorio.Buscar(util.ToInt(PrestamoidTextBox.Text));
                 if (verificar != null)
                 {
                     paso = prestamoRepositorio.Modificar(prestamos);
-                    ImprimirButton.Visible = true;
+
                 }
                 else
                 {
@@ -160,11 +159,14 @@ namespace _1erParcial.UI.Registros
 
             if (paso)
             {
+
+                Response.Write("<script>window.open('/WReportes/RepDPrestamo.aspx','_blank');</script");
+
                 util.ShowToastr(this.Page, "Guardado con exito!!", "Guardado!!", "success");
-            
+                Limpiar();
             }
 
-
+            
 
         }
 
@@ -250,7 +252,6 @@ namespace _1erParcial.UI.Registros
                 Llenacampos(prestamo);
                 BalanceTextBox.Visible = true;
                 Labelbalance.Visible = true;
-                ImprimirButton.Visible = true;
                 util.ShowToastr(this, "Busqueda exitosa", "Exito", "success");
                 
             }
@@ -261,16 +262,5 @@ namespace _1erParcial.UI.Registros
             }
         }
 
-        protected void ImprimirButton_Click(object sender, EventArgs e)
-        {
-
-
-          // Response.Redirect(@"~\WReportes\RepDPrestamo.aspx");
-
-
-           Response.Write("<script>window.open('http://localhost:49959/WReportes/RepDPrestamo.aspx','_blank');</script");
-
-
-        }
     }
 }

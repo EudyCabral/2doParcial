@@ -28,7 +28,7 @@
               
                 
                  <div class="col-md-2.5 col-sm-2.5 col-xl-2.5 col-2.5">
-                      <asp:TextBox class="form-control " ID="FechaTextBox" runat="server" TextMode="Date" ReadOnly="True"></asp:TextBox>
+                      <asp:TextBox class="form-control col-md-12" ID="FechaTextBox" runat="server" TextMode="Date" ReadOnly="True"></asp:TextBox>
              
                 </div>
 
@@ -91,8 +91,11 @@
         </div>
 
          <div class="row">
-                        <asp:GridView ID="DetalleGridView" CssClass=" col-md-offset-4 col-sm-offset-4" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"  AutoGenerateColumns="true">
+                        <asp:GridView ID="DetalleGridView" CssClass=" col-md-offset-4 col-sm-offset-4" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"  AutoGenerateColumns="False">
+                           
                             <AlternatingRowStyle BackColor="White" />
+                             
+                           
 
                             <EditRowStyle BackColor="#2461BF" />
                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -104,6 +107,14 @@
                             <SortedAscendingHeaderStyle BackColor="#6D95E1" />
                             <SortedDescendingCellStyle BackColor="#E9EBEF" />
                             <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                            <Columns>
+                               <asp:BoundField DataField="NCuota" HeaderText="No.Cuota" />
+                                <asp:BoundField DataField="Fecha" HeaderText="Fecha" />
+                                <asp:BoundField DataField="Interes" HeaderText="Interes" />
+                                <asp:BoundField DataField="Capital" HeaderText="Capital" />
+                                <asp:BoundField DataField="Balance" HeaderText="Balance" />
+                                </Columns>
+
                         </asp:GridView>
              </div>
           
@@ -113,17 +124,15 @@
         <div class="form-group">
        
                     
-           <div class="row" style="align-items:center;">
-  <div class="col-md-3 col-sm- col-xl-3 col-3">
-               <asp:Button ID="ImprimirButton" runat="server" Text="Imprimir" class="btn btn-success" ValidationGroup="ValidacionGC" Enabled="True" EnableViewState="True" Visible="False" OnClick="ImprimirButton_Click"  />
-                  </div>
-               <asp:Label ID="Labelbalance" class="col-md-1 control-label" runat="server" Text="Balance:" Visible="False"></asp:Label>
-          <div class="col-md-2 col-sm-2 col-xl-2 col-2">
+           <div class="row " style="align-items:center;">
+
+               <asp:Label ID="Labelbalance" class="col-md-1 col-sm-1 col-xl-1 control-label" runat="server" Text="Balance:" Visible="False"></asp:Label>
+   
+                <asp:TextBox ID="BalanceTextBox" class="col-md-2 col-sm-2 col-xl-2 form-control " runat="server" TextMode="Number" ReadOnly="True" Visible="False"></asp:TextBox>
+                        
              
-                <asp:TextBox ID="BalanceTextBox" class="form-control " runat="server" TextMode="Number" ReadOnly="True" Visible="False"></asp:TextBox>
-               
                 </div>
-            </div>
+           
         </div>  
 
        <div class="row" style="justify-content: center;">

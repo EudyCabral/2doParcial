@@ -44,6 +44,7 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <ZIndex>1</ZIndex>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -209,6 +210,7 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>CuentaId</rd:DefaultName>
+                      <ZIndex>2</ZIndex>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -220,6 +222,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -350,7 +353,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.25in</Top>
+        <Top>0.125in</Top>
         <Height>0.52084in</Height>
         <Width>6.5in</Width>
         <Style>
@@ -366,7 +369,7 @@
   <Width>6.5in</Width>
   <Page>
     <PageHeader>
-      <Height>2.32167in</Height>
+      <Height>2.2175in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -467,9 +470,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox12</rd:DefaultName>
-          <Top>1.9675in</Top>
+          <Top>1.8425in</Top>
           <Left>2.16542in</Left>
-          <Height>0.25in</Height>
+          <Height>0.29167in</Height>
           <Width>2.05333in</Width>
           <ZIndex>3</ZIndex>
           <Style>

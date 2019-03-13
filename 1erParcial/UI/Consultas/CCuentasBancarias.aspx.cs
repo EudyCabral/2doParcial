@@ -109,7 +109,8 @@ namespace _1erParcial.UI.Consultas
         }
         protected void ImprimirButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect(@"~\WReportes\RepCuentas.aspx");
+
+            Response.Write("<script>window.open('/WReportes/RepCuentas.aspx','_blank');</script");
         }
     }
 }
