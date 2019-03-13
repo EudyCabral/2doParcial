@@ -113,7 +113,7 @@ namespace _1erParcial.UI.Registros
                 {
                     if (repositorio.VerificarDeposito(util.ToDecimal(MontoTextBox.Text)))
                     {
-                        if (DepositosidTextBox.Text == "0")
+                        if (depositos.DepositoId == 0)
                         {
                             paso = repositorio.Guardar(depositos);
 

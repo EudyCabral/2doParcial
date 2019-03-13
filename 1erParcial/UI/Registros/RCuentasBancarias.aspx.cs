@@ -38,7 +38,7 @@ namespace _1erParcial.UI.Registros
 
             if (Page.IsValid)
             {
-                if (CuentaidTextBox.Text == "0")
+                if (cuenta.CuentaId == 0)
                 {
                     paso = repositorio.Guardar(cuenta);
 

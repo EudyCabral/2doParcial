@@ -108,13 +108,16 @@ namespace _1erParcial.UI.Registros
                     cuota.Balance = cuota.Balance - (cuota.Capital + cuota.Interes);
                 }
 
+                
+               
                 prestamo = (Prestamos)ViewState["Prestamos"];
 
 
                 prestamo.AgregarDetalle(0, Utilidades.util.ToInt(PrestamoidTextBox.Text), i, cuota.Fecha.AddMonths(i), cuota.Interes, cuota.Capital, cuota.Balance);
 
                 ViewState["Prestamos"] = prestamo;
-          
+
+               
                 this.BindGrid();
              
             }
@@ -183,7 +186,7 @@ namespace _1erParcial.UI.Registros
             prestamo.Interes = util.ToInt(InteresTextBox.Text);
             prestamo.Tiempo = util.ToInt(TiempoTextBox.Text);
             prestamo.Balance = util.ToDecimal(BalanceTextBox.Text);
-
+            Session["Prestamo"] = prestamo;
             return prestamo;
 
         }
