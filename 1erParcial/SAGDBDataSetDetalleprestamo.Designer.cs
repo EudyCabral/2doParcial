@@ -20,9 +20,9 @@ namespace _1erParcial {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SAGDBDataSetPrestamo")]
+    [global::System.Xml.Serialization.XmlRootAttribute("SAGDBDataSetDetalleprestamo")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SAGDBDataSetPrestamo : global::System.Data.DataSet {
+    public partial class SAGDBDataSetDetalleprestamo : global::System.Data.DataSet {
         
         private PrestamoDetallesDataTable tablePrestamoDetalles;
         
@@ -32,7 +32,7 @@ namespace _1erParcial {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public SAGDBDataSetPrestamo() {
+        public SAGDBDataSetDetalleprestamo() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -43,7 +43,7 @@ namespace _1erParcial {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected SAGDBDataSetPrestamo(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected SAGDBDataSetDetalleprestamo(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -142,7 +142,7 @@ namespace _1erParcial {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SAGDBDataSetPrestamo cln = ((SAGDBDataSetPrestamo)(base.Clone()));
+            SAGDBDataSetDetalleprestamo cln = ((SAGDBDataSetDetalleprestamo)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -223,9 +223,9 @@ namespace _1erParcial {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SAGDBDataSetPrestamo";
+            this.DataSetName = "SAGDBDataSetDetalleprestamo";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SAGDBDataSetPrestamo.xsd";
+            this.Namespace = "http://tempuri.org/SAGDBDataSetDetalleprestamo.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablePrestamoDetalles = new PrestamoDetallesDataTable();
@@ -257,7 +257,7 @@ namespace _1erParcial {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SAGDBDataSetPrestamo ds = new SAGDBDataSetPrestamo();
+            SAGDBDataSetDetalleprestamo ds = new SAGDBDataSetDetalleprestamo();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -556,7 +556,7 @@ namespace _1erParcial {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SAGDBDataSetPrestamo ds = new SAGDBDataSetPrestamo();
+                SAGDBDataSetDetalleprestamo ds = new SAGDBDataSetDetalleprestamo();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -923,7 +923,7 @@ namespace _1erParcial {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SAGDBDataSetPrestamo ds = new SAGDBDataSetPrestamo();
+                SAGDBDataSetDetalleprestamo ds = new SAGDBDataSetDetalleprestamo();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1241,7 +1241,7 @@ namespace _1erParcial {
         }
     }
 }
-namespace _1erParcial.SAGDBDataSetPrestamoTableAdapters {
+namespace _1erParcial.SAGDBDataSetDetalleprestamoTableAdapters {
     
     
     /// <summary>
@@ -1394,7 +1394,7 @@ namespace _1erParcial.SAGDBDataSetPrestamoTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SAGDBDataSetPrestamo.PrestamoDetallesDataTable dataTable) {
+        public virtual int Fill(SAGDBDataSetDetalleprestamo.PrestamoDetallesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1407,9 +1407,9 @@ namespace _1erParcial.SAGDBDataSetPrestamoTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SAGDBDataSetPrestamo.PrestamoDetallesDataTable GetData() {
+        public virtual SAGDBDataSetDetalleprestamo.PrestamoDetallesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SAGDBDataSetPrestamo.PrestamoDetallesDataTable dataTable = new SAGDBDataSetPrestamo.PrestamoDetallesDataTable();
+            SAGDBDataSetDetalleprestamo.PrestamoDetallesDataTable dataTable = new SAGDBDataSetDetalleprestamo.PrestamoDetallesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1601,7 +1601,7 @@ namespace _1erParcial.SAGDBDataSetPrestamoTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SAGDBDataSetPrestamo.PrestamosDataTable dataTable) {
+        public virtual int Fill(SAGDBDataSetDetalleprestamo.PrestamosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1614,9 +1614,9 @@ namespace _1erParcial.SAGDBDataSetPrestamoTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SAGDBDataSetPrestamo.PrestamosDataTable GetData() {
+        public virtual SAGDBDataSetDetalleprestamo.PrestamosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SAGDBDataSetPrestamo.PrestamosDataTable dataTable = new SAGDBDataSetPrestamo.PrestamosDataTable();
+            SAGDBDataSetDetalleprestamo.PrestamosDataTable dataTable = new SAGDBDataSetDetalleprestamo.PrestamosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1624,14 +1624,14 @@ namespace _1erParcial.SAGDBDataSetPrestamoTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SAGDBDataSetPrestamo.PrestamosDataTable dataTable) {
+        public virtual int Update(SAGDBDataSetDetalleprestamo.PrestamosDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SAGDBDataSetPrestamo dataSet) {
+        public virtual int Update(SAGDBDataSetDetalleprestamo dataSet) {
             return this.Adapter.Update(dataSet, "Prestamos");
         }
         
@@ -1831,7 +1831,7 @@ namespace _1erParcial.SAGDBDataSetPrestamoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(SAGDBDataSetPrestamo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(SAGDBDataSetDetalleprestamo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._prestamosTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Prestamos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1850,7 +1850,7 @@ namespace _1erParcial.SAGDBDataSetPrestamoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(SAGDBDataSetPrestamo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(SAGDBDataSetDetalleprestamo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._prestamosTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Prestamos.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1868,7 +1868,7 @@ namespace _1erParcial.SAGDBDataSetPrestamoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(SAGDBDataSetPrestamo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(SAGDBDataSetDetalleprestamo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._prestamosTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Prestamos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1910,7 +1910,7 @@ namespace _1erParcial.SAGDBDataSetPrestamoTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(SAGDBDataSetPrestamo dataSet) {
+        public virtual int UpdateAll(SAGDBDataSetDetalleprestamo dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

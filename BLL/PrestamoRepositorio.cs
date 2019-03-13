@@ -51,7 +51,7 @@ namespace BLL
 
             try
             {
-               Prestamos prestamos = contexto.prestamos.Find(id);
+                Prestamos prestamos = contexto.prestamos.Find(id);
 
                 if (prestamos != null)
                 {
@@ -92,7 +92,7 @@ namespace BLL
 
                     foreach (var item in prestamos.Detalles)
                     {
-                       // string s = item.prestamos.NombreCuenta;
+                        // string s = item.prestamos.NombreCuenta;
 
                     }
                 }
@@ -109,42 +109,36 @@ namespace BLL
 
             bool paso = false;
 
-            Repositorio<Depositos> repositorio = new Repositorio<Depositos>();
+            Repositorio<Prestamos> repositorio = new Repositorio<Prestamos>();
             try
             {
                 _contexto = new Contexto();
                 //Buscar la entidades que no estan para removerlas
-                var anterior = _contexto.prestamos.Find(prestamos.PrestamoId);
+                var CuotasAnt = _contexto.prestamoDetalles.Where(x => x.PrestamoId == prestamos.PrestamoId).AsNoTracking().ToList();
 
-                foreach (var item in anterior.Detalles)
+                foreach (var item in CuotasAnt)
                 {
-                    if(!prestamos.Detalles.Exists(x => x.Id == item.Id))
-                    {
-                     
-                        _contexto.Entry(item).State = EntityState.Deleted;
-                    }
-
+                    _contexto.Entry(item).State = System.Data.Entity.EntityState.Deleted;
                 }
-
-
 
 
                 var prestamoanterior = repositorio.Buscar(prestamos.PrestamoId);
 
-                var Cuenta = _contexto.cuentasbancarias.Find(prestamos.Cuenta);
-                var Cuentasanterior = _contexto.cuentasbancarias.Find(prestamoanterior.CuentaId);
 
-                if (prestamos.Cuenta != prestamoanterior.CuentaId)
+                var Cuenta = _contexto.cuentasbancarias.Find(prestamos.Cuenta);
+                var Cuentasanterior = _contexto.cuentasbancarias.Find(prestamoanterior.Cuenta);
+
+                if (prestamos.Cuenta != prestamoanterior.Cuenta)
                 {
                     Cuenta.Balance += prestamos.Balance;
-                    Cuentasanterior.Balance -= prestamoanterior.Monto;
+                    Cuentasanterior.Balance -= prestamoanterior.Balance;
                 }
 
 
 
                 //identificar la diferencia ya sea restada o sumada
                 decimal diferencia;
-                diferencia = prestamos.Balance - prestamoanterior.Monto;
+                diferencia = prestamos.Balance - prestamoanterior.Balance;
 
 
 
@@ -153,24 +147,14 @@ namespace BLL
 
 
 
-
                 foreach (var item in prestamos.Detalles)
                 {
-                    var estado = item.Id > 0 ? EntityState.Modified : EntityState.Added;
-                    _contexto.Entry(item).State = estado;
-
+                    _contexto.Entry(item).State = EntityState.Added;
                 }
 
                 _contexto.Entry(prestamos).State = EntityState.Modified;
 
-
-                if (_contexto.SaveChanges() > 0)
-                {
-                    paso = true;
-                    _contexto.Dispose();
-                }
-                
-
+                paso = _contexto.SaveChanges() > 0 ? true : false;
             }
             catch (Exception) { throw; }
 
@@ -200,16 +184,16 @@ namespace BLL
         public decimal BalanceCuota(decimal capital, decimal interes)
         {
             decimal BalanceCuota = 0;
-           
+
             interes /= 100;
 
- 
-            BalanceCuota =  (capital* interes)+capital;
+
+            BalanceCuota = (capital * interes) + capital;
             return BalanceCuota;
 
 
         }
 
-      
+
     }
 }

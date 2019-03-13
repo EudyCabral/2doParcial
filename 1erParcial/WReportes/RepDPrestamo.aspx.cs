@@ -14,18 +14,20 @@ namespace _1erParcial.WReportes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-        //    if (!Page.IsPostBack)
-        //    {
-        //        Repositorio<Prestamos> repositorio = new Repositorio<Prestamos>();
+            if (!Page.IsPostBack)
+            {
+                Repositorio<Prestamos> repositorio = new Repositorio<Prestamos>();
+                Repositorio<PrestamoDetalles> repositorioD = new Repositorio<PrestamoDetalles>();
 
-        //        MyReportViewer.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Local;
-        //        MyReportViewer.Reset();
-        //        MyReportViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\Prestamo.rdlc");
-        //        MyReportViewer.LocalReport.DataSources.Clear();
-        //        MyReportViewer.LocalReport.DataSources.Add(new ReportDataSource("Prestamos", repositorio.GetList(x => true)));
+                MyReportViewer.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Local;
+                MyReportViewer.Reset();
+                MyReportViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\Prestamo.rdlc");
+                MyReportViewer.LocalReport.DataSources.Clear();
+                MyReportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSetPrestamo", repositorio.GetList(x => true)));
+                MyReportViewer.LocalReport.DataSources.Add(new ReportDataSource("Detalle", repositorioD.GetList(x => true)));
 
-        //        MyReportViewer.LocalReport.Refresh();
-        //    }
+                MyReportViewer.LocalReport.Refresh();
+            }
         }
     }
 }

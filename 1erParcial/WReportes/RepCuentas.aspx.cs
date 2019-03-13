@@ -22,8 +22,8 @@ namespace _1erParcial.WReportes
                 MyReportViewer.Reset();
                 MyReportViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\Cuentas.rdlc");
                MyReportViewer.LocalReport.DataSources.Clear();
-                MyReportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", repositorio.GetList(x => true)));
-
+                MyReportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", (List<CuentasBancarias>)Session["Cuentas"]));
+                
                 MyReportViewer.LocalReport.Refresh();
             }
 

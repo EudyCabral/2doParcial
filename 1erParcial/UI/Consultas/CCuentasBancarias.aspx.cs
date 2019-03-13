@@ -86,8 +86,9 @@ namespace _1erParcial.UI.Consultas
                         break;
 
             }
-
-            CuentasGridView.DataSource = repositorio.GetList(filtro);
+            var listacuenta = repositorio.GetList(filtro);
+            Session["Cuentas"] = listacuenta;
+            CuentasGridView.DataSource = listacuenta;
             CuentasGridView.DataBind();
 
             if (CuentasGridView.Rows.Count > 0)

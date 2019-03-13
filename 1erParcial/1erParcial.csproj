@@ -114,16 +114,16 @@
     <Content Include="SAGDBDataSet.xss">
       <DependentUpon>SAGDBDataSet.xsd</DependentUpon>
     </Content>
-    <Content Include="SAGDBDataSetPrestamo.xsc">
-      <DependentUpon>SAGDBDataSetPrestamo.xsd</DependentUpon>
+    <Content Include="SAGDBDataSetDetalleprestamo.xsc">
+      <DependentUpon>SAGDBDataSetDetalleprestamo.xsd</DependentUpon>
     </Content>
-    <None Include="SAGDBDataSetPrestamo.xsd">
+    <None Include="SAGDBDataSetDetalleprestamo.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SAGDBDataSetPrestamo.Designer.cs</LastGenOutput>
+      <LastGenOutput>SAGDBDataSetDetalleprestamo.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <Content Include="SAGDBDataSetPrestamo.xss">
-      <DependentUpon>SAGDBDataSetPrestamo.xsd</DependentUpon>
+    <Content Include="SAGDBDataSetDetalleprestamo.xss">
+      <DependentUpon>SAGDBDataSetDetalleprestamo.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.6.3-vsdoc.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -187,10 +187,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SAGDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SAGDBDataSetPrestamo.Designer.cs">
+    <Compile Include="SAGDBDataSetDetalleprestamo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SAGDBDataSetPrestamo.xsd</DependentUpon>
+      <DependentUpon>SAGDBDataSetDetalleprestamo.xsd</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

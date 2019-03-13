@@ -107,16 +107,16 @@
                         </asp:GridView>
              </div>
           
-    <%--    <div class="form-group">
-           <div class="row" style="align-items:center;">
-        <div class="col-md-3 col-sm-3 col-xl-3 col-3"> 
-                    <asp:Button ID="ImprimirButton" runat="server" Text="Imprimir" class="btn btn-success" ValidationGroup="ValidacionGC" Enabled="True" EnableViewState="True" Visible="True" OnClick="ImprimirButton_Click"  />
-                   </div></div></div>--%>
-
+        
+        
+       
         <div class="form-group">
+       
+                    
            <div class="row" style="align-items:center;">
-  
-
+  <div class="col-md-3 col-sm- col-xl-3 col-3">
+               <asp:Button ID="ImprimirButton" runat="server" Text="Imprimir" class="btn btn-success" ValidationGroup="ValidacionGC" Enabled="True" EnableViewState="True" Visible="False" OnClick="ImprimirButton_Click"  />
+                  </div>
                <asp:Label ID="Labelbalance" class="col-md-1 control-label" runat="server" Text="Balance:" Visible="False"></asp:Label>
           <div class="col-md-2 col-sm-2 col-xl-2 col-2">
              

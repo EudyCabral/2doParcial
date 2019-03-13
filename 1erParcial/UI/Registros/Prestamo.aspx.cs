@@ -59,7 +59,7 @@ namespace _1erParcial.UI.Registros
             FechaTextBox.Text = DateTime.Now.ToString("yyyy-MM-dd");
             ViewState["Prestamos"] = new Prestamos();
             this.BindGrid();
-          
+            ImprimirButton.Visible = false;
             BalanceTextBox.Visible = false;
             Labelbalance.Visible = false;
         }
@@ -75,7 +75,7 @@ namespace _1erParcial.UI.Registros
            
             ViewState["Prestamos"] = new Prestamos();
             this.BindGrid();
-
+            ImprimirButton.Visible = false;
 
             PrestamoRepositorio repositorio = new PrestamoRepositorio();
             Prestamos prestamo = new Prestamos();
@@ -138,7 +138,10 @@ namespace _1erParcial.UI.Registros
 
             if (prestamos.PrestamoId == 0)
             {
+
                 paso = prestamoRepositorio.Guardar(prestamos);
+                ImprimirButton.Visible = true;
+
             }
             else
             {
@@ -146,6 +149,7 @@ namespace _1erParcial.UI.Registros
                 if (verificar != null)
                 {
                     paso = prestamoRepositorio.Modificar(prestamos);
+                    ImprimirButton.Visible = true;
                 }
                 else
                 {
@@ -157,7 +161,7 @@ namespace _1erParcial.UI.Registros
             if (paso)
             {
                 util.ShowToastr(this.Page, "Guardado con exito!!", "Guardado!!", "success");
-                Limpiar();
+            
             }
 
 
@@ -173,7 +177,7 @@ namespace _1erParcial.UI.Registros
             prestamo.Fecha = Convert.ToDateTime(FechaTextBox.Text);
             prestamo.Cuenta = util.ToInt(CuentasDropDownList.SelectedValue);
             prestamo.NombreCuenta = RetornarNombre(util.ToInt(CuentasDropDownList.SelectedValue));
-            prestamo.Capital = util.ToInt(CapitalTextBox.Text);
+            prestamo.Capital = util.ToDecimal(CapitalTextBox.Text);
             prestamo.Interes = util.ToInt(InteresTextBox.Text);
             prestamo.Tiempo = util.ToInt(TiempoTextBox.Text);
             prestamo.Balance = util.ToDecimal(BalanceTextBox.Text);
@@ -246,19 +250,27 @@ namespace _1erParcial.UI.Registros
                 Llenacampos(prestamo);
                 BalanceTextBox.Visible = true;
                 Labelbalance.Visible = true;
+                ImprimirButton.Visible = true;
                 util.ShowToastr(this, "Busqueda exitosa", "Exito", "success");
+                
             }
             else
             {
-                util.ShowToastr(this.Page, "El usuario que intenta buscar no existe", "Error", "error");
+                util.ShowToastr(this.Page, "El  Prestamo que intenta buscar no existe", "Error", "error");
                 Limpiar();
             }
         }
 
-        //protected void ImprimirButton_Click(object sender, EventArgs e)
-        //{
-        //    Response.Redirect(@"~\WReportes\RepDPrestamo.aspx");
+        protected void ImprimirButton_Click(object sender, EventArgs e)
+        {
 
-        //}
+
+          // Response.Redirect(@"~\WReportes\RepDPrestamo.aspx");
+
+
+           Response.Write("<script>window.open('http://localhost:49959/WReportes/RepDPrestamo.aspx','_blank');</script");
+
+
+        }
     }
 }

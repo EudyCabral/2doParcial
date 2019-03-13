@@ -24,7 +24,7 @@ namespace _1erParcial.WReportes
                 MyReportViewer.Reset();
                 MyReportViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\ReportePrestamo.rdlc");
                 MyReportViewer.LocalReport.DataSources.Clear();
-                MyReportViewer.LocalReport.DataSources.Add(new ReportDataSource("Prestamos",repositorio.GetList(x=>true)));
+                MyReportViewer.LocalReport.DataSources.Add(new ReportDataSource("Prestamos",(List<Prestamos>)Session["Prestamo"]));
               
                 MyReportViewer.LocalReport.Refresh();
             }

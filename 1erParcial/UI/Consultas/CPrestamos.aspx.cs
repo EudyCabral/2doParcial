@@ -118,8 +118,9 @@ namespace _1erParcial.UI.Consultas
 
 
             }
-
-            PrestamoGridView.DataSource = repositorio.GetList(filtro);
+            var ListaPrestamo = repositorio.GetList(filtro);
+            Session["Prestamo"] = ListaPrestamo;
+            PrestamoGridView.DataSource = ListaPrestamo;
          
             PrestamoGridView.DataBind();
 
