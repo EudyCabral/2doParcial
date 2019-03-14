@@ -21,8 +21,6 @@ namespace Entidades
         public decimal Balance { get; set; }
 
         [ForeignKey("PrestamoId")]
-
-
         public virtual Prestamos prestamos { get; set; }
 
         public PrestamoDetalles()

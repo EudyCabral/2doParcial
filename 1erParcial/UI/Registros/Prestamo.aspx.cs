@@ -125,7 +125,7 @@ namespace _1erParcial.UI.Registros
             BalanceTextBox.Visible = true;
             Labelbalance.Visible = true;
         }
-
+     
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
       
@@ -136,6 +136,7 @@ namespace _1erParcial.UI.Registros
             }
             PrestamoRepositorio prestamoRepositorio = new PrestamoRepositorio();
             Prestamos prestamos = LlenaClase();
+         
             bool paso = false;
 
             if (prestamos.PrestamoId == 0)
@@ -160,9 +161,11 @@ namespace _1erParcial.UI.Registros
                 }
             }
 
+
+
             if (paso)
             {
-
+                ReportePrestamo(prestamos.PrestamoId);
                 Response.Write("<script>window.open('/WReportes/RepDPrestamo.aspx','_blank');</script");
 
                 util.ShowToastr(this.Page, "Guardado con exito!!", "Guardado!!", "success");
@@ -186,7 +189,8 @@ namespace _1erParcial.UI.Registros
             prestamo.Interes = util.ToInt(InteresTextBox.Text);
             prestamo.Tiempo = util.ToInt(TiempoTextBox.Text);
             prestamo.Balance = util.ToDecimal(BalanceTextBox.Text);
-            Session["Prestamo"] = prestamo;
+            
+            
             return prestamo;
 
         }
@@ -263,6 +267,16 @@ namespace _1erParcial.UI.Registros
                 util.ShowToastr(this.Page, "El  Prestamo que intenta buscar no existe", "Error", "error");
                 Limpiar();
             }
+        }
+
+        public void ReportePrestamo(int id)
+        {
+            Repositorio<PrestamoDetalles> repositorio = new Repositorio<PrestamoDetalles>();
+            Repositorio<Prestamos> prestarepo = new Repositorio<Prestamos>();
+
+            Session["PrestamoD"] = repositorio.GetList(x => x.PrestamoId == id);
+            Session["Prestamo"] = prestarepo.GetList(x => x.PrestamoId == id);
+
         }
 
     }

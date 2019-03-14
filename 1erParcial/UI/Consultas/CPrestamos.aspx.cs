@@ -31,9 +31,10 @@ namespace _1erParcial.UI.Consultas
         {
 
             Repositorio<Prestamos> repositorio = new Repositorio<Prestamos>();
+            
             if (repositorio.GetList(filtro).Count() == 0)
             {
-                util.ShowToastr(this.Page, "No Existe", "Informacion", "info");
+                util.ShowToastr(this.Page, "No Existe o ", "Informacion", "info");
                 return;
             }
 

@@ -26,8 +26,8 @@ namespace _1erParcial.WReportes
 
           
 
-                MyReportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSetPrestamo", repositorio.GetList(x => true)));
-                MyReportViewer.LocalReport.DataSources.Add(new ReportDataSource("Detalle", repositorioD.GetList(x => true)));
+                MyReportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSetPrestamo", (List<Prestamos>)Session["Prestamo"]));
+                MyReportViewer.LocalReport.DataSources.Add(new ReportDataSource("Detalle", (List<PrestamoDetalles>)Session["PrestamoD"]));
                 MyReportViewer.LocalReport.Refresh();
             }
         }
