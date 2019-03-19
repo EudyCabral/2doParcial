@@ -154,8 +154,6 @@
     <Content Include="UI\Registros\Prestamo.aspx" />
     <Content Include="UI\Registros\RCuentasBancarias.aspx" />
     <Content Include="UI\Registros\RDepositos.aspx" />
-    <Content Include="UI\Samples\SampleCuentas.aspx" />
-    <Content Include="UI\Samples\samplePrestamo.aspx" />
     <Content Include="Web.config" />
     <Content Include="WReportes\RepCuentas.aspx" />
     <Content Include="WReportes\RepDPrestamo.aspx" />
@@ -244,20 +242,6 @@
     <Compile Include="UI\Registros\RDepositos.aspx.designer.cs">
       <DependentUpon>RDepositos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UI\Samples\SampleCuentas.aspx.cs">
-      <DependentUpon>SampleCuentas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UI\Samples\SampleCuentas.aspx.designer.cs">
-      <DependentUpon>SampleCuentas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Samples\samplePrestamo.aspx.cs">
-      <DependentUpon>samplePrestamo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UI\Samples\samplePrestamo.aspx.designer.cs">
-      <DependentUpon>samplePrestamo.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Utilidades\util.cs" />
     <Compile Include="WReportes\RepCuentas.aspx.cs">
       <DependentUpon>RepCuentas.aspx</DependentUpon>
@@ -300,6 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="UI\Samples\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
