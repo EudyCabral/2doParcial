@@ -80,15 +80,19 @@ namespace _1erParcial.UI.Registros
             Prestamos prestamo = new Prestamos();
             PrestamoDetalles cuota = new PrestamoDetalles();
 
+            
 
             int fila = Utilidades.util.ToInt(TiempoTextBox.Text);
             DateTime fecha = Convert.ToDateTime(FechaTextBox.Text);
 
 
-            decimal interes = Utilidades.util.ToInt(InteresTextBox.Text);
+            decimal interes = Utilidades.util.ToDecimal(InteresTextBox.Text);
             int tiempo = Utilidades.util.ToInt(TiempoTextBox.Text);
             decimal capital = Utilidades.util.ToDecimal(CapitalTextBox.Text);
             BalanceTextBox.Text = repositorio.BalanceCuota(capital, interes).ToString();
+
+            if (ValidacionIT(interes, tiempo,capital) == true) { return; }
+
             interes /= 100;
 
             for (int i = 1; i <= fila; i++)
@@ -108,12 +112,12 @@ namespace _1erParcial.UI.Registros
                     cuota.Balance = cuota.Balance - (cuota.Capital + cuota.Interes);
                 }
 
-                
                
+
                 prestamo = (Prestamos)ViewState["Prestamos"];
 
 
-                prestamo.AgregarDetalle(0, Utilidades.util.ToInt(PrestamoidTextBox.Text), i, cuota.Fecha.AddMonths(i), cuota.Interes, cuota.Capital, cuota.Balance);
+                prestamo.AgregarDetalle(0, Utilidades.util.ToInt(PrestamoidTextBox.Text), i, cuota.Fecha.AddMonths(i), Math.Round(cuota.Interes, 2),Math.Round(cuota.Capital,2), Math.Round(cuota.Balance,2));
 
                 ViewState["Prestamos"] = prestamo;
 
@@ -134,9 +138,12 @@ namespace _1erParcial.UI.Registros
                 util.ShowToastr(this.Page, "El Grid esta Vacio, Favor de hacer el Calculo!!", "Informacio!!", "info");
                 return;
             }
+
+            
             PrestamoRepositorio prestamoRepositorio = new PrestamoRepositorio();
             Prestamos prestamos = LlenaClase();
-         
+
+    
             bool paso = false;
 
             if (prestamos.PrestamoId == 0)
@@ -251,7 +258,16 @@ namespace _1erParcial.UI.Registros
         {
             
             PrestamoRepositorio repositorio = new PrestamoRepositorio();
-            var prestamo = repositorio.Buscar(util.ToInt(PrestamoidTextBox.Text));
+            Prestamos prestamo; 
+            if (PrestamoidTextBox.Text != "")
+            {
+                 prestamo = repositorio.Buscar(util.ToInt(PrestamoidTextBox.Text));
+            }
+            else
+            {
+                util.ShowToastr(this, "Prestamo Id esta Vacio, Favor llenar", "Error", "error");
+                return;
+            }
 
             if (prestamo != null)
             {
@@ -264,7 +280,7 @@ namespace _1erParcial.UI.Registros
             }
             else
             {
-                util.ShowToastr(this.Page, "El  Prestamo que intenta buscar no existe", "Error", "error");
+                util.ShowToastr(this.Page, "El  Prestamo que intenta buscar no existe", "Error", "info");
                 Limpiar();
             }
         }
@@ -276,6 +292,34 @@ namespace _1erParcial.UI.Registros
 
             Session["PrestamoD"] = repositorio.GetList(x => x.PrestamoId == id);
             Session["Prestamo"] = prestarepo.GetList(x => x.PrestamoId == id);
+
+        }
+
+        public bool ValidacionIT(decimal i, int t,decimal m)
+        {
+            bool paso = false;
+            if(i<0)
+            {
+                util.ShowToastr(this.Page, "Interes debe ser un numero entero igual o mayor que 0", "Informacion", "info");
+                paso = true;
+            }
+
+            if (t <= 0)
+            {
+                util.ShowToastr(this.Page, "Tiempor debe ser Mayor que cero", "Informacion", "info");
+                paso = true;
+                
+            }
+
+            if (m <= 0)
+            {
+                util.ShowToastr(this.Page, "Capital debe ser Mayor que cero", "Informacion", "info");
+                paso = true;
+
+            }
+
+            return paso;
+
 
         }
 
