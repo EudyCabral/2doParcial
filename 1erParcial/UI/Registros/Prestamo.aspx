@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Prestamo.aspx.cs" Inherits="_1erParcial.UI.Registros.Prestamo" %>
+﻿<%@ Page Title="Prestamo" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Prestamo.aspx.cs" Inherits="_1erParcial.UI.Registros.Prestamo" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

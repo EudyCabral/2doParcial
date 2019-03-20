@@ -20,7 +20,8 @@ namespace _1erParcial.WReportes
        
                 MyReportViewer.ProcessingMode = Microsoft.Reporting.WebForms.ProcessingMode.Local;
                 MyReportViewer.Reset();
-                MyReportViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\Cuentas.rdlc");
+             
+                 MyReportViewer.LocalReport.ReportPath = Server.MapPath(@"~\Reportes\Cuentas.rdlc");
                MyReportViewer.LocalReport.DataSources.Clear();
                 MyReportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", (List<CuentasBancarias>)Session["Cuentas"]));
                 

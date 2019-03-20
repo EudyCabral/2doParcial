@@ -106,6 +106,12 @@
     <Content Include="SAGDBDataSet.xsc">
       <DependentUpon>SAGDBDataSet.xsd</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\PrestamosSAG - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\prestamossag - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\prestamossag - FTP2.pubxml" />
+    <None Include="Properties\PublishProfiles\PrestamosSAG - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\prestamossag - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\prestamossag - Web Deploy2.pubxml" />
     <None Include="SAGDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>SAGDBDataSet.Designer.cs</LastGenOutput>
@@ -154,7 +160,9 @@
     <Content Include="UI\Registros\Prestamo.aspx" />
     <Content Include="UI\Registros\RCuentasBancarias.aspx" />
     <Content Include="UI\Registros\RDepositos.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="WReportes\RepCuentas.aspx" />
     <Content Include="WReportes\RepDPrestamo.aspx" />
     <Content Include="WReportes\RepPrestamo.aspx" />
@@ -297,9 +305,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reportes\Cuentas.rdlc" />
-    <EmbeddedResource Include="Reportes\Prestamo.rdlc" />
-    <EmbeddedResource Include="Reportes\ReportePrestamo.rdlc" />
+    <Content Include="Reportes\Cuentas.rdlc" />
+    <Content Include="Reportes\Prestamo.rdlc" />
+    <Content Include="Reportes\ReportePrestamo.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

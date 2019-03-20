@@ -6,9 +6,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
 
-
-
-    <%--modificado--%>
     <div class="container">
 
         <div class="form-group">
