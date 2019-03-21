@@ -59,7 +59,7 @@
 
                 <asp:RequiredFieldValidator ErrorMessage="*" ID="RequiredFieldValidatorBalance" ControlToValidate="BalanceTextBox" Display="Static" runat="server" ForeColor="Red" ValidationGroup="ValidacionGuardar">*</asp:RequiredFieldValidator>
             </div>
-            <hr>
+            
             <div class="panel">
                 <div class="text-center">
                     <div class="form-group">

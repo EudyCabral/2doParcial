@@ -13,6 +13,15 @@ namespace _1erParcial.UI.Consultas {
     public partial class CPrestamos {
         
         /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+        
+        /// <summary>
         /// TipodeFiltro control.
         /// </summary>
         /// <remarks>
@@ -22,13 +31,13 @@ namespace _1erParcial.UI.Consultas {
         protected global::System.Web.UI.WebControls.DropDownList TipodeFiltro;
         
         /// <summary>
-        /// LabelCriterio control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelCriterio;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// TextCriterio control.

@@ -104,18 +104,16 @@
     </div>
 
     </div>
-        <div class="col-sm-10" >
-
-         <div class="columns">
-                <div class="form-group">
-                    <div class="row" style="align-items: center;">
+        <div class="col-sm-12" >
+                <div class="form-group row" style="align-items: center;">
+                  
 
                         <asp:GridView ID="DepositosGridView" runat="server" class="table table-condensed table-bordered table-responsive" AutoGenerateColumns="true" CellPadding="4" ForeColor="#333333" GridLines="None">
                             <AlternatingRowStyle BackColor="LightSkyBlue" />
                            
                             <HeaderStyle BackColor="LightCyan" Font-Bold="True" />
                         </asp:GridView>
-                    </div>
+                  
                 </div>
             </div>
 
